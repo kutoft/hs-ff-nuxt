@@ -11,3 +11,8 @@
     <span aria-hidden="true"></span>
   </a>
 </template>
+<style>
+.navbar-burger {
+  color: #fff;
+}
+</style>

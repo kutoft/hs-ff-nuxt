@@ -68,9 +68,9 @@ export default {
 }
 .site-search-wrapper {
   transform: translateX(5px);
-  @media (max-width: 1023px) {
-    display: none;
-  }
+  // @media (max-width: 1023px) {
+  //   display: none;
+  // }
 }
 .navbar-burger {
   height: auto;

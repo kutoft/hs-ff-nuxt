@@ -1,5 +1,5 @@
 <template>
-  <section :class="`hero is-medium hero-theme-${computedTheme}`">
+  <section :class="`hero hero-theme-${computedTheme}`">
     <img
       class="hero-bg-img"
       :src="responsiveImage.src"
@@ -60,6 +60,12 @@ export default {
   text-align: center;
   overflow: hidden;
   position: relative;
+  height: 80vh;
+  justify-content: center;
+}
+
+.hero-body {
+  flex-grow: 0;
 }
 
 .title {
