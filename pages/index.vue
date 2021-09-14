@@ -5,20 +5,21 @@
     <main-section theme="sidebar-right">
       <template v-slot:default>
         <!-- All Posts -->
-        <posts-grid />
+        <nfl-state />
+        <league-state />
       </template>
       <template v-slot:sidebar>
         Nothing here
       </template>
     </main-section>
-    <news-letter-form-modal />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import { setPageData } from '../helper'
-import NewsLetterFormModal from '~/components/NewsLetterFormModal'
+import NflState from '~/components/sleeper/NflState'
+import LeagueState from '~/components/sleeper/LeagueState'
 
 export default {
   name: 'HomePage',
@@ -28,7 +29,8 @@ export default {
     }
   },
   components: {
-    NewsLetterFormModal
+    NflState,
+    LeagueState
   },
   computed: {
     ...mapState(['title', 'subtitle', 'featureImage'])

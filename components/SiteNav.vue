@@ -1,9 +1,5 @@
 <template>
-  <nav
-    class="navbar is-fixed-top"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
         <site-logo v-if="$siteConfig.logo === 'logo-component'" />
@@ -58,6 +54,10 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .navbar-item {
   height: 6rem;
