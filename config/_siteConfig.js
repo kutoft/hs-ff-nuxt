@@ -9,7 +9,7 @@ import theCMS from '../cms/netlify/cms'
  * General Site configurations
  */
 export default {
-  siteName: 'Stuck On Stupid',
+  siteName: 'Stuck With Stupid',
   tagline: 'A terrible fantasy football league with even worse managers.',
   featureImage: '/uploads/home-hero.jpg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
