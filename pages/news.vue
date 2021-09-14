@@ -1,6 +1,10 @@
 <template>
   <div id="news-page" class="page-wrapper news-page">
-    <site-hero :title="title" :subtitle="subtitle" :image="featureImage">
+    <site-hero
+      title="News"
+      subtitle="Updates about the dumb things people are complaining about today."
+      image="/uploads/about-hero.jpg"
+    >
     </site-hero>
     <main-section theme="one-column">
       <template v-slot:default>

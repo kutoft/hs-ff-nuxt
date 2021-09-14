@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar has-shadow is-fixed-top"
+    class="navbar is-fixed-top"
     role="navigation"
     aria-label="main navigation"
   >
@@ -39,19 +39,15 @@
             {{ item.name }}
           </component>
         </li>
-        <li class="navbar-item site-search-wrapper">
-          <site-search />
-        </li>
       </ul>
     </div>
   </nav>
 </template>
 <script>
-import SiteSearch from '~/components/SiteSearch'
 import HamburgerButton from '~/components/HamburgerButton'
 export default {
   name: 'SiteNav',
-  components: { SiteSearch, HamburgerButton },
+  components: { HamburgerButton },
   data() {
     return {
       active: false
@@ -60,8 +56,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.navbar {
+  background: transparent;
+}
+.navbar-item {
+  height: 6rem;
+  overflow: hidden;
+}
 .navbar-item img {
-  max-height: 2rem;
+  max-height: 9rem;
 }
 .site-search-wrapper {
   transform: translateX(5px);

@@ -12,9 +12,9 @@ export default {
   siteName: 'Stuck With Stupid',
   tagline: 'A terrible fantasy football league with even worse managers.',
   featureImage: '/uploads/home-hero.jpg',
-  logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
+  logo: 'sws-logo_white.png', // 'logo-component', // or '/logo.svg' for regular image
   googleAnalytics: {
-    on: true,
+    on: false,
     id: process.env.GOOGLE_ANALYTICS_ID
   },
   mainMenu: [
@@ -45,7 +45,7 @@ export default {
 
   // Disqus
   disqus: {
-    on: true,
+    on: false,
     loadingStrategy: 'button', // Options: onload, lazy, button
     siteShortName: 'blog-danielkelly-io' // 'blog-danielkelly-io'
   },
@@ -86,7 +86,7 @@ export default {
       display: true
     },
     perRow: 3,
-    perPage: 6
+    perPage: 12
   }
 }
 

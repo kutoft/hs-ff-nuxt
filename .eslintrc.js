@@ -14,14 +14,16 @@ module.exports = {
     '@nuxtjs',
     'plugin:nuxt/recommended'
   ],
-  plugins: [
-    'prettier'
-  ],
+  plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    "no-console": "off",
-    "vue/no-v-html": "off",
-    "vue/html-self-closing": "off",
-    "nuxt/no-timing-in-fetch-data": "off"
+    'no-console': 'off',
+    'vue/no-v-html': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/attributes-order': 'off',
+    'vue/comment-directive': 'off',
+    'vue/require-component-is': 'off',
+    'nuxt/no-timing-in-fetch-data': 'off',
+    'space-before-function-paren': 'off'
   }
 }
