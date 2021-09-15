@@ -5,11 +5,10 @@
     <main-section theme="sidebar-right">
       <template v-slot:default>
         <!-- All Posts -->
-        <nfl-state />
         <league-state />
       </template>
       <template v-slot:sidebar>
-        Nothing here
+        <stupid-jar-list />
       </template>
     </main-section>
   </div>
@@ -18,8 +17,8 @@
 <script>
 import { mapState } from 'vuex'
 import { setPageData } from '../helper'
-import NflState from '~/components/sleeper/NflState'
 import LeagueState from '~/components/sleeper/LeagueState'
+import StupidJarList from '~/components/sleeper/StupidJarList'
 
 export default {
   name: 'HomePage',
@@ -29,8 +28,8 @@ export default {
     }
   },
   components: {
-    NflState,
-    LeagueState
+    LeagueState,
+    StupidJarList
   },
   computed: {
     ...mapState(['title', 'subtitle', 'featureImage'])

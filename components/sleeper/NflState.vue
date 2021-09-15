@@ -1,9 +1,7 @@
 <template>
   <section>
     <loading-spinner v-if="loading" />
-    <code v-if="!loading">
-      {{ state }}
-    </code>
+    <h5 v-if="!loading">{{ state.season }}</h5>
   </section>
 </template>
 <script>
@@ -36,3 +34,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+</style>

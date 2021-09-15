@@ -1,9 +1,40 @@
 <template>
   <section>
-    <loading-spinner v-if="loading" />
-    <code v-if="!loading">
-      {{ state }}
-    </code>
+    <div class="card">
+      <h2>Roster Positions</h2>
+      <loading-spinner v-if="loading" />
+      <div v-if="!loading">
+        <ul>
+          <li v-for="position in state.roster_positions" :key="position">
+            {{ position }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Scoring Settings</h2>
+      <loading-spinner v-if="loading" />
+      <div v-if="!loading">
+        <ul>
+          <li v-for="(value, key) in state.scoring_settings" :key="key">
+            {{ key }}: {{ value }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Settings</h2>
+      <loading-spinner v-if="loading" />
+      <div v-if="!loading">
+        <ul>
+          <li v-for="(value, key) in state.settings" :key="key">
+            {{ key }}: {{ value }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 </template>
 <script>
@@ -71,3 +102,17 @@ export default {
   }
 }
 </script>
+<style scoped>
+h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+</style>
