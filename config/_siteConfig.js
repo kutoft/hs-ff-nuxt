@@ -68,10 +68,18 @@ export default {
     }
   },
 
+  // Managers
+  managers: {
+    on: true,
+    perPage: 12,
+    imageDimensions: null, // See card.imageDimensions (can be unique for categories if set here)
+    theme: null // See card.theme (can be unique for categories if set here)
+  },
+
   // Categories
   categories: {
     on: true,
-    perPage: 6,
+    perPage: 12,
     imageDimensions: null, // See card.imageDimensions (can be unique for categories if set here)
     theme: null // See card.theme (can be unique for categories if set here)
   },
