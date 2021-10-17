@@ -52,5 +52,60 @@ collections:
     fields:
       - { label: 'First Name', name: 'first_name', widget: 'string' }
       - { label: 'Last Name', name: 'last_name', widget: 'string' }
-      - { label: 'Jar Amount', name: 'jar_amount', widget: 'number' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - label: 'History'
+        name: 'history'
+        widget: 'object'
+        collapsed: true
+        summary: '{{fields.year}}: {{fields.season_record.wins}}-{{fields.season_record.loses}}'
+        fields:
+          - label: 'Year'
+            name: 'year'
+            widget: 'datetime'
+            date_format: 'YYYY'
+            format: 'YYYY'
+          - label: 'Jar Amount'
+            name: 'jar_amount'
+            widget: 'number'
+            value_tyep: 'int'
+          - { label: 'Has Paid', name: 'has_paid', widget: 'boolean' }
+          - label: 'Season Record'
+            name: 'season_record'
+            widget: 'object'
+            collapsed: true
+            summary: '{{fields.wins}}-{{fields.loses}}'
+            fields:
+              - label: 'Wins'
+                name: 'wins'
+                widget: 'number'
+                value_type: 'int'
+              - label: 'Loses'
+                name: 'loses'
+                widget: 'number'
+                value_type: 'int'
+          - label: 'Playoffs'
+            name: 'playoffs'
+            widget: 'object'
+            collapsed: true
+            summary: 'Seed: {fields.seed}} & Result: {{fields.result}}'
+            fields:
+              - label: 'Bracket Type'
+                name: 'bracket_type'
+                widget: 'select'
+                options: ['winners', 'loses']
+              - label: 'Seed'
+                name: 'seed'
+                widget: 'number'
+                value_type: 'int'
+              - label: 'Result'
+                name: 'result'
+                widget: 'number'
+                value_type: 'int'
+              - label: 'Is Winner'
+                name: 'is_winner'
+                widget: 'boolean'
+                default: false
+              - label: 'IS Loser'
+                name: 'is_loser'
+                widget: 'boolean'
+                default: false
