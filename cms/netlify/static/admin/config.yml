@@ -52,7 +52,12 @@ collections:
     fields:
       - { label: 'First Name', name: 'first_name', widget: 'string' }
       - { label: 'Last Name', name: 'last_name', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'markdown',
+          required: false,
+        }
       - label: 'History'
         name: 'history'
         widget: 'list'
@@ -69,6 +74,7 @@ collections:
             name: 'jar_amount'
             widget: 'number'
             value_tyep: 'int'
+            required: false
           - label: 'Has Paid'
             name: 'has_paid'
             widget: 'boolean'
@@ -88,11 +94,13 @@ collections:
             widget: 'number'
             value_type: 'int'
             min: 1
+            required: false
           - label: 'Playoff Result'
             name: 'playoff_result'
             widget: 'number'
             value_type: 'int'
             min: 1
+            required: false
           - label: 'Is Winner'
             name: 'is_winner'
             widget: 'boolean'
