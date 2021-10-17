@@ -55,7 +55,8 @@ collections:
       - { label: 'Description', name: 'description', widget: 'markdown' }
       - label: 'History'
         name: 'history'
-        widget: 'object'
+        widget: 'list'
+        add_to_top: true
         collapsed: true
         summary: '{{fields.year}}: {{fields.season_record.wins}}-{{fields.season_record.loses}}'
         fields:
@@ -87,7 +88,7 @@ collections:
             name: 'playoffs'
             widget: 'object'
             collapsed: true
-            summary: 'Seed: {fields.seed}} & Result: {{fields.result}}'
+            summary: 'Seed: {{fields.seed}} & Result: {{fields.result}}'
             fields:
               - label: 'Bracket Type'
                 name: 'bracket_type'
