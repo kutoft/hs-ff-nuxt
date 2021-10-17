@@ -58,7 +58,7 @@ collections:
         widget: 'list'
         add_to_top: true
         collapsed: true
-        summary: '{{fields.year}}: {{fields.season_record.wins}}-{{fields.season_record.loses}}'
+        summary: '{{fields.year}}: {{fields.wins}}-{{fields.loses}}'
         fields:
           - label: 'Year'
             name: 'year'
@@ -69,44 +69,35 @@ collections:
             name: 'jar_amount'
             widget: 'number'
             value_tyep: 'int'
-          - { label: 'Has Paid', name: 'has_paid', widget: 'boolean' }
-          - label: 'Season Record'
-            name: 'season_record'
-            widget: 'object'
-            collapsed: true
-            summary: '{{fields.wins}}-{{fields.loses}}'
-            fields:
-              - label: 'Wins'
-                name: 'wins'
-                widget: 'number'
-                value_type: 'int'
-              - label: 'Loses'
-                name: 'loses'
-                widget: 'number'
-                value_type: 'int'
-          - label: 'Playoffs'
-            name: 'playoffs'
-            widget: 'object'
-            collapsed: true
-            summary: 'Seed: {{fields.seed}} & Result: {{fields.result}}'
-            fields:
-              - label: 'Bracket Type'
-                name: 'bracket_type'
-                widget: 'select'
-                options: ['winners', 'loses']
-              - label: 'Seed'
-                name: 'seed'
-                widget: 'number'
-                value_type: 'int'
-              - label: 'Result'
-                name: 'result'
-                widget: 'number'
-                value_type: 'int'
-              - label: 'Is Winner'
-                name: 'is_winner'
-                widget: 'boolean'
-                default: false
-              - label: 'IS Loser'
-                name: 'is_loser'
-                widget: 'boolean'
-                default: false
+          - label: 'Has Paid'
+            name: 'has_paid'
+            widget: 'boolean'
+            default: false
+          - label: 'Wins'
+            name: 'wins'
+            widget: 'number'
+            value_type: 'int'
+            min: 0
+          - label: 'Loses'
+            name: 'loses'
+            widget: 'number'
+            value_type: 'int'
+            min: 0
+          - label: 'Playoff Seed'
+            name: 'playoff_seed'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
+          - label: 'Playoff Result'
+            name: 'playoff_result'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
+          - label: 'Is Winner'
+            name: 'is_winner'
+            widget: 'boolean'
+            default: false
+          - label: 'Is Loser'
+            name: 'is_loser'
+            widget: 'boolean'
+            default: false
